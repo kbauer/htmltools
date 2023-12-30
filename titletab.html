@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>?</title>
+  </head>
+  <body>
+    <h1 id="h1.title">?</h1>
+    <script>
+      let title;
+      if(location.hash) {
+        title = location.hash.slice(1);
+      } else {
+        title = prompt("Title?");
+      }
+      document.getElementById("h1.title").innerText = title;
+      document.title = title;
+    </script>
+  </body>
+</html>
