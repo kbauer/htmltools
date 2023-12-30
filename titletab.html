@@ -7,12 +7,13 @@
     <script>
       let title;
       if(location.hash) {
-        title = location.hash.slice(1);
+        title = decodeURI(location.hash.slice(1));
       } else {
         title = prompt("Title?");
       }
       document.getElementById("h1.title").innerText = title;
       document.title = title;
+      location.hash = "#" + title;
     </script>
   </body>
 </html>
